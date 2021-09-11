@@ -105,7 +105,7 @@ class Runtime {
     }
   public:
     void run(int slice) {
-      runQueue.push_back(this);
+      
       while(slice > 0 && p < length) {
         string &str = exec[p++];
 //        cout << id << ":"<< p <<"\t" << str << endl;
@@ -139,6 +139,7 @@ int main() {
   while(runQueue.size()) {
     Runtime &r = *runQueue.front();
     runQueue.pop_front();
+    runQueue.push_back(r);
     r.run(slice);
   }
 
