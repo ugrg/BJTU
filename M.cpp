@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <string>
 using namespace std;
 
 class Task {
@@ -30,15 +31,17 @@ int sum(int &x1, int &y1, int &x2, int &y2) {
 }
 
 int main() {
-  int n, q, x1,y1,x2,y2;;
+  int n, q, x1, y1, x2, y2;
   for(cin >> n; n > 0; n--) {
     task.push_back(new Task());
   }
-  list<int> out;
+  char temp[20];
+  string out="";
   for(cin >> q; q > 0; q--) {
     cin >> x1 >> y1 >> x2 >> y2;
-    out.push_back(sum(x1,y1,x2,y2));
+    sprintf(temp, "%d\n", sum(x1,y1,x2,y2));    
+    out+=temp;
   }
-  for(LTI p = out.begin(); p!=out.end(); p++) cout << *p << endl;
+  cout << out;  
   for(LTT p = task.begin(); p!=task.end(); p++) delete *p;
 }
