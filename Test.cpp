@@ -85,16 +85,18 @@ inline int lis() {
 }
 
 int main() {
-  ios::sync_with_stdio(false); 
+//  ios::sync_with_stdio(false); 
 //  cin.tie(0);
 //  cout.tie(0);
-  cin>>N;
+//  cin>>N;
 //  int t1 = szw(),t2=liw(),t3=szc(),t4=lic();
-  int t5 = szs(),t6=lis();
+//  int t5 = szs(),t6=lis();
 //  cout<<"[] cout="<<t1<<endl;
 //  cout<<"list cout="<<t2<<endl;
 //  cout<<"[] cout="<<t3<<endl;
 //  cout<<"list cout="<<t4<<endl;
-  cout<<"[] cout="<<t5<<endl;
-  cout<<"list cout="<<t6<<endl;
+//  cout<<"[] cout="<<t5<<endl;
+//  cout<<"list cout="<<t6<<endl;
+  string s1 = "ABC", s2 = "abc";
+  cout << (s1 > s2) << endl;
 }
